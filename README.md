@@ -1,7 +1,7 @@
 ![Game of Thrones Banner](images/thronesBanner.jpg "GameofThronesBanner")
 # HOUSES of the Game of Thrones
 
-### By Natasha Adler
+### By Natasha Adler   
 
 Game of thrones or GOT has many houses. Explore them through their house videos and descriptions. Which house do you belong to?
 
@@ -26,10 +26,6 @@ Use a modern Browser such as [Firefox](https://www.mozilla.org/en-CA/firefox/new
 	<li>JS</li>
 </ul>
 
-<<<<<<< HEAD
 ## License
-=======
-##License
->>>>>>> 290dcccf2bd6f948b9b7f5f8723a669f95a4cc91
 
-MIT
+ MIT
