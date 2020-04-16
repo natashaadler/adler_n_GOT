@@ -1,7 +1,7 @@
-![Game of Thrones Banner](thronesBanner.jpg "GameofThronesBanner")
-#HOUSES of the Game of Thrones
+![Game of Thrones Banner](images/thronesBanner.jpg "GameofThronesBanner")
+# HOUSES of the Game of Thrones
 
-###By Natasha Adler
+### By Natasha Adler
 
 Game of thrones or GOT has many houses. Explore them through their house videos and descriptions. Which house do you belong to?
 
