@@ -10,7 +10,11 @@ let sigilButtons = document.querySelectorAll(".sigilContainer"),
     //can also write this as gotVideo = lightBox.querySelector("video")
     lightBoxClose = lightBox.querySelector(".lightBoxClose"),
     houseName = document.querySelector("h1"),
-    houseDescription = document.querySelector(".house-info");
+    houseDescription = document.querySelector(".house-info"),
+    vol = document.querySelector(".vol"),
+    pause = document.querySelector(".pause"),
+    mute = document.querySelector(".mute");
+
 
 
 //idea for FIP -- for promo -- reference promo title and content
@@ -43,12 +47,13 @@ const houseData = [
 
   let newVideoSource = `video/House-${targetSource}.mp4`;
     //debugger;
+    console.log(newVideoSource)
 
 
     lightBox.classList.add("show-lightBox");
 
     //plays video as soon as you open the view port
-    gotVideo.src = newVideoSource
+    gotVideo.src = newVideoSource;
     gotVideo.load();
     gotVideo.play();
   }
@@ -65,7 +70,6 @@ const houseData = [
     //animate the banners across the page using some basic math and css
     let offsetValue = 600;
     let targetValue = offsetValue * this.dataset.offset;
-    debugger;
     //
     //figure out how to make the banners "slide using this new value"
     //
@@ -75,10 +79,32 @@ const houseData = [
   //sigilButtons.forEach(button => button.addEventListener("click", showLightBox))
 
   // add a click event to the sigilButtons -- this will animate the banners across the top of the page
-  sigilButtons.forEach(button => button.addEventListener("click", animateBanners))
+  sigilButtons.forEach(button => button.addEventListener("click", showLightBox))
 
   //add an event handler for the lightbox close sigilButton
+
   lightBoxClose.addEventListener("click", hideLightBox);
+
+  mute.addEventListener("click", () => {
+    if (gotVideo.muted) {
+      gotVideo.muted = false;
+    } else {
+      gotVideo.muted = true;
+    }
+  });
+
+  pause.addEventListener("click", () => {
+    if (gotVideo.paused) {
+      gotVideo.play();
+    } else {
+      gotVideo.pause();
+    }
+  });
+
+
+  vol.addEventListener("input", () => {
+    gotVideo.volume = vol.value / 10;
+  });
 
 
 
