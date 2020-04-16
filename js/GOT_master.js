@@ -25,7 +25,7 @@ const houseData = [
   ["Frey", `House Frey of the Twins was the Great House of the Riverlands, having gained their position for their treachery against their former liege lords, House Tully, who were stripped of all their lands and titles for their rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all the male Freys soon after.`]
 ];
 
-//events go in the middle
+  //events go in the middle
   function showLightBox() {
   // pop open a light box here and show some content
   //start with house className
@@ -42,12 +42,12 @@ const houseData = [
   let targetSource = targetName.charAt(0).toUpperCase() + targetName.slice(1);
 
   let newVideoSource = `video/House-${targetSource}.mp4`;
-  //debugger;
+    //debugger;
 
 
     lightBox.classList.add("show-lightBox");
 
-//plays video as soon as you open the view port
+    //plays video as soon as you open the view port
     gotVideo.src = newVideoSource
     gotVideo.load();
     gotVideo.play();
@@ -56,15 +56,28 @@ const houseData = [
   function hideLightBox() {
     lightBox.classList.remove("show-lightBox");
 
-//makes the video pause when ou exit the view port
+    //makes the video pause when ou exit the view port
     gotVideo.pause();
     gotVideo.currentTime = 0;
   }
 
-// add a click event to the sigilButtons
-  sigilButtons.forEach(button => button.addEventListener("click", showLightBox))
+  function animateBanners(){
+    //animate the banners across the page using some basic math and css
+    let offsetValue = 600;
+    let targetValue = offsetValue * this.dataset.offset;
+    debugger;
+    //
+    //figure out how to make the banners "slide using this new value"
+    //
+  }
 
-//add an event handler for the lightbox close sigilButton
+  // add a click event to the sigilButtons -- changes data and the video source
+  //sigilButtons.forEach(button => button.addEventListener("click", showLightBox))
+
+  // add a click event to the sigilButtons -- this will animate the banners across the top of the page
+  sigilButtons.forEach(button => button.addEventListener("click", animateBanners))
+
+  //add an event handler for the lightbox close sigilButton
   lightBoxClose.addEventListener("click", hideLightBox);
 
 
